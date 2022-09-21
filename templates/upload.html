@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+</style>
+<body>
+{% extends "home.html" %}
+{% csrf_token %}
+
+      <div>
+          {%for message in messages%}
+          <div>{{message}}</div>
+          {%endfor%}
+          <form action="{% url 'upload' %}" method="post" enctype="multipart/form-data">
+            <label for="title">enter title of song</label>
+                <input type="text" name="title" required><br><br>
+                
+                <label for="template">upload template for song</label>
+                <input type="file" accept="image/jpeg,image/png" required name="template"><br><br>
+
+                <label for="song">upload song</label>
+                <input type="file" value="uploadmusic" accept="audio/ogg,audio/mpeg" id="music" name="song"><br><br>
+              <button type="submit"> upload</button>
+
+
+
+          </form>
+      </div>
+</body>
+</html>
