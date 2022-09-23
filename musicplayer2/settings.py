@@ -24,9 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-a_hz5-gw1t594i6sogh%b9da!*h4137y4ltkkglh$)#^na=ie5'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['103.159.249.142','127.0.0.1','0.0.0.0','play-musix.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1','play-musix.herokuapp.com']
 
 
 # Application definition
